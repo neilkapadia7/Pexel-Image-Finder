@@ -2,7 +2,6 @@ import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
 import {getPhoto, removePhoto} from '../../actions/imageActions';
 import {connect} from 'react-redux';
-import { Link } from 'react-router-dom';
 
 const Photo = props => {
 
@@ -26,7 +25,6 @@ const Photo = props => {
 
     return (
         <div>
-            <Link to='/'>Home</Link>
             <a href={url} target='_blank'><img src={src.original} height='450px' width='100%' alt='Pexel Image'/></a>
             <a href={photographer_url} target='_blank'><p>{photographer}</p></a>
         </div>
