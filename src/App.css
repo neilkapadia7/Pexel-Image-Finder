@@ -1,10 +1,20 @@
 .App {
   text-align: center;
 }
+.img-gallery-div{
+  width: 90%;
+  padding: 50px 5% 100px 5%;
+  display: flex;
+  flex-wrap: wrap;
+}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.gallery-image{
+  width: 30%;
+  margin: 20px 1.66%;
+}
+
+.next {
+  cursor: pointer;
 }
 
 @media (prefers-reduced-motion: no-preference) {
