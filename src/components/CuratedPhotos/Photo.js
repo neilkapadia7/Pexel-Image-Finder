@@ -18,15 +18,21 @@ const Photo = props => {
     }, []);
 
     if(loading || photo === null) {
-        return <h3>Loading...</h3>
+        return <center><h1 className='home-title'>Loading...</h1></center>
     }
 
     const {url, photographer, photographer_url, photographer_id, src} = photo;
 
     return (
-        <div>
-            <a href={url} target='_blank'><img src={src.original} height='450px' width='100%' alt='Pexel Image'/></a>
-            <a href={photographer_url} target='_blank'><p>{photographer}</p></a>
+        <div className='main-image-div'>
+            <div className='main-image'>
+                <a href={url} target='_blank'>
+                <img src={src.original} alt='Pexel Image'/>
+                </a>
+            </div>
+            <div className='photographer-div'>
+            Photographer : <a href={photographer_url} target='_blank' className='photographer-name'>{photographer}</a>
+            </div>
         </div>
     )
 }

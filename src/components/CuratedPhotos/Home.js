@@ -17,10 +17,10 @@ const Home = ({ images: {curated_photos, loading}, getCuratedPhotos}) => {
     }, [curPage]);
     
     if(loading || curated_photos === null) {
-        return <h3>Loading...</h3>
+        return <center><h1 className='home-title'>Loading...</h1></center>
     }
     if(loading) {
-        return <h3>Loading...</h3>
+        return <center><h1 className='home-title'>Loading...</h1></center>
     }
 
     // const pagination = () => {
@@ -39,31 +39,36 @@ const Home = ({ images: {curated_photos, loading}, getCuratedPhotos}) => {
 
     return (
         <div>
-            <h1>Pexel API</h1>
+            <center>
+                <h1 className='home-title'>Pexel API</h1>
+            </center>
             <div className='img-gallery-div'>
                 {curated_photos.photos.map(photo => 
                     <CuratedItem key={photo.id} photo={photo} />    
                 )}
             </div>
             
-            <center>
-                <div style={{display: 'flex', flexWrap: 'wrap'}}>
-                    {/* {}
-                    {rows.map(row => 
+            
+                
+                    {/* {rows.map(row => 
                           <p onClick={() => setCurPage(row, () => console.log('Hello'))} key={row} style={{margin: 7}}>{row}</p>    
-                    )} */}
-
+                    )}  */}
+                <div className='pagination-div'>
                     {
                     curPage === 1
-                        ? <p className='next' onClick={Next}>Next</p>
+                        ? <div style={{display:'flex', justifyContent: 'center'}}>
+                            <p className='next' onClick={Next}>Next</p>
+                          </div>
                         : 
                           <Fragment>
-                            <p className='next' onClick={Previos}>Previous</p>
-                            <p className='next' onClick={Next}>Next</p>
+                              <div style={{display:'flex', justifyContent: 'center'}}>
+                                <p className='next' onClick={Previos}>Prev</p>
+                                <p className='next' onClick={Next}>Next</p>
+                              </div>                              
                           </Fragment>
                     }
                 </div>
-            </center>
+              
         </div>
     )
 }

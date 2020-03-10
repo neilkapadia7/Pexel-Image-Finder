@@ -8,3 +8,7 @@ export const SET_KEYWORD = 'SET_KEYWORD';
 export const GET_PICS = 'GET_PICS';
 export const SET_LOADING = 'SET_LOADING';
 export const ERROR = 'ERROR';
+
+export const GET_VIDEOS = 'GET_VIDEOS';
+export const GET_VIDEO = 'GET_VIDEO';
+export const REMOVE_VIDEO = 'REMOVE_VIDEO';

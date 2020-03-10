@@ -9,7 +9,7 @@ const CuratedItem = ({photo}) => {
     return (
         <div className='gallery-image'>
             <Link to={`/photo/${id}`}>
-                <img src={src.original} height='450px' width='100%' alt='Pexel Image'/>
+                <img src={src.original} height='100%' width='100%' alt='Pexel Image'/>
             </Link>
         </div>
     )

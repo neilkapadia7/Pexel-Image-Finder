@@ -1,6 +1,129 @@
-.App {
-  text-align: center;
+#top-section {
+  height: 550px;
+  width: 100%;
+  background-image: url('./components/Layout/buildings-city-cityscape-dark-417192.jpg');
+  display: table;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
+header {
+  z-index: 9999;
+  position: fixed;
+  width: 100%;
+  padding: 0 100px;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  top: 0;
+  left: 0;
+  box-shadow:0 0 30px #ccc;
+	transition:.5s;
+}
+.logo {
+  float: left;
+  height: 55px;
+  line-height: 55px;
+}
+.logo img {
+  height: 45px; 
+  width: 150px;
+  line-height: 45px;
+  padding: 5px 0;
+}
+header nav {
+  float:right;
+	font-family: 'Roboto', sans-serif;
+  height: 55px;
+  line-height: 55px;
+	transition:.5;
+	font-size:15px;
+	font-weight:500;
+}
+header nav ul {
+  margin:0;
+	padding:0 20px;
+	display:flex;
+}
+header nav ul li{
+  list-style:none;
+}
+header nav ul li a{
+  position:relative;
+  padding:0 30px;
+  text-decoration:none;
+  display:block;
+  text-transform:uppercase;
+  box-sizing:border-box;
+  transition:.5s;
+  color: #000000;
+  height: 55px;
+  line-height: 55px;
+}
+.upload{
+  background-color: #05a081;
+  height: 45px;
+  line-height: 45px;
+  margin: 5px 0;
+  border-radius: 5px;
+  color: #FFFFFF;
+}
+/* Search  */
+.search-div{
+  width: 45%;
+  margin: 160px 27.5% 0 27.5%;
+}
+.search-title{
+  color: #FFFFFF;
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 700;
+  text-align: left;
+}
+.search-div form {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.search-div input[type = "text" ] {
+  width: 94%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+  padding-left: 16px;
+}
+.suggested{
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  color: #FFFFFF;
+  font-weight: 100;
+  padding-top: 5px;
+}
+
+.search-div i {
+  width: 6%;
+  height: 100%;
+  background-color: #FFFFFF;
+  border: none;
+  outline: none;
+  text-align: center;
+  display: block;
+  line-height: 45px;
+}
+
+/* Home */
+.home-title{
+  padding-top: 40px;
+  font-size: 40px;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Images */
 .img-gallery-div{
   width: 90%;
   padding: 50px 5% 100px 5%;
@@ -11,38 +134,60 @@
 .gallery-image{
   width: 30%;
   margin: 20px 1.66%;
+  background-color: rgb(165, 178, 252);
+  height: 450px;
 }
-
+.pagination-div {
+  border-top: 1px solid #ccc;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
 .next {
   cursor: pointer;
+  padding: 12px 20px;
+  text-align: center;
+  margin: 5px 20px;
+  background-color: #05a081;
+  color: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  box-shadow: 0 0 10px #05a081;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Main Image */
+.main-image-div{
+  width: 50%;
+  margin: 80px 25%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.main-image{
+  width: 100%;
+  background-color: rgb(165, 178, 252);
+  margin: 0;
+  padding: 0;
+}
+.main-image img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+.photographer-div{
+  text-align: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
 }
-
-.App-link {
-  color: #61dafb;
+.photographer-name{
+  text-decoration: none;
+  color: #000000;
+  font-weight: 600;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.photographer-name:hover {
+  text-decoration: none;
 }

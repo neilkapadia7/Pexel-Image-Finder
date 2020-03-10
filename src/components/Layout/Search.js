@@ -31,12 +31,14 @@ const Search = ({images: {search, keyword}, getSearch}) => {
     }
 
     return (
-        <div>
+        <div className='search-div'>
             {search ? <Redirect to={`/search`} /> : ''} 
+            <h2 className='search-title'>The best free stock photos &amp; videos shared by talented creators.</h2>
             <form onSubmit={onSubmit}>
-                <input type='text' placeholder='Search Photos' onChange={e => setSearchField(e.target.value)} value={searchField} name='searchField'/>
-                <input type='submit' value='Search' />
+                <input type='text' placeholder='Search for free photos' onChange={e => setSearchField(e.target.value)} value={searchField} name='searchField' required/>
+                <i className="fas fa-search" type='submit'></i>
             </form>
+            <p className='suggested'><span style={{fontWeight: 400}}>Suggested:</span> city,  beach,  street,  new york,  nature,  greeting,  more</p>
         </div>
     )
 }
