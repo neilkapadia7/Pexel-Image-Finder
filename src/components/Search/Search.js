@@ -18,7 +18,7 @@ const Search = props => {
     }, []);
     
     if(searchPhotos === null || search === false ) {
-        return <h4>Nothing in the Search Box</h4>
+        return <center><h4 className='home-title'>Nothing in the Search Box</h4></center>
     }
 
     if(keyword){
@@ -30,7 +30,7 @@ const Search = props => {
     }
     return (
         <div>
-            {keyword ? <h3>Showing Results for:  {correctKeyword}</h3> : 'Nothing in the Search Box'}
+            {keyword ? <center><h3 className='home-title2'>Showing Results for:  <strong>{correctKeyword}</strong></h3></center> : <center><h3 className='home-title'>Nothing in the Search Box</h3></center>}
 
             <div className='img-gallery-div'>
                 {searchPhotos.photos.map(photo => 
